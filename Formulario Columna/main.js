@@ -10,13 +10,13 @@ tener un fondo de color verde (#4cd463) y los de EGRESO, color rojo (#e8574d).
 
 En el pie de la tabla, se debe mostrar un resumen de la tabla, sumando todos los ingresos y restandole los egresos. Si
 el monto final es > 0, debe tener el color rojo y si es mayor, el verde. */
-console.log('atr');
 
 const   typeField = document.querySelector('#type'),
         descriptionField = document.querySelector('#description'),
         amountField = document.querySelector('#amount'),
         dateField = document.querySelector('#date'),
         btnSm = document.querySelector('button'),
+        tbody = document.querySelector('tbody'),
         movimiento = [];
 
 const generarMovimiento = () =>{
@@ -29,14 +29,37 @@ const generarMovimiento = () =>{
     return objeto;
 }
 
+const ImprimirMovimiento = (array,target) => {
+    array.forEach((movimiento) => {
+        const row = document.createElement('tr');
+        const keys = Object.keys(movimiento);
+        keys.forEach((key) => {
+            const td = document.createElement('td');
+            const text = document.createTextNode(movimiento[key]);
+            td.appendChild(text);
+            row.appendChild(td);
+        });
+    });
+    target.appendChild(row);
+};
+
 const limpiarMovimiento = () => {
     [descriptionField,amountField,dateField].forEach((input) =>{
         input.value = '';
     })
-}
+};
+
+const limpiarTabla = () => {
+    while(tbody.firstChild){
+        tbody.removeChild(tbody.firstChild);
+    }
+};
         
 btnSm.addEventListener('click',(e)=> {
     const nuevoMoviento = generarMovimiento();
+    limpiarTabla();
     movimiento.push(nuevoMoviento);
+    ImprimirMovimiento(movimiento, tbody);
     limpiarMovimiento();
+    
 })
