@@ -1,0 +1,41 @@
+* { margin:0; padding:0;}
+
+#content {
+    width: 100vw;
+    height: 100vh;
+    background-color: cornflowerblue;
+    display: flex;
+}
+
+#form {
+    width: 25%;
+    height: 100%;
+    background-color: rgb(44, 44, 44);
+    color: rgb(252, 36, 36);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid rgb(133, 97, 97);
+}
+
+input, select { 
+    margin-bottom: 1em;
+    padding: 0.5em 0.2em;
+    width: 280px;
+}
+
+#btn-sm {   
+    width: 250px;
+    border-radius: 1px;
+    border-style: none;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+#table {
+    width: 75%;
+}
+

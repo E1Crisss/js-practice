@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="content">
+        <div id="form"> 
+            <label for="type">Tipo de Movimiento</label>
+            <select name="" id="type">
+                <option>INGRESO</option>
+                <option>EGRESO</option>
+            </select>
+
+            <label for="description">Descripcion del Movimiento</label>
+            <input type="text" name="" id="description">
+            
+            <label for="amount"> Importe</label>
+            <input type="number" name="" id="amount">
+            
+            <label for="date">Fecha del Movimiento</label>
+            <input type="date" name="" id="date">
+
+            <button id="btn-sm">Guardar Movimiento</button>
+            
+        </div>
+        <div id="table">
+
+            <table class="w-full h-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Descripcion
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Tipo de movimiento
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Fecha
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Importe
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <!--   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                            Apple MacBook Pro 17"
+                        </th>
+                        <td class="px-6 py-4">
+                            Sliver
+                        </td>
+                        <td class="px-6 py-4">
+                            Laptop
+                        </td>
+                        <td class="px-6 py-4">
+                            $2999
+                        </td>
+                    </tr> -->
+                    <tfoot class="text-gray-900 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 ">
+                        <th>
+                            <td class="px-6 py-4"></td>
+                            <td class="px-6 py-4"></td>
+                            <td class="px-6 py-4">$ 12000</td>
+                        </th>
+                    </tfoot>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    <script src="./main.js"></script>
+
+</body>
+</html>
